@@ -1,0 +1,28 @@
+{
+  "name": "english_chatbot_be",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.7",
+    "bcryptjs": "^2.4.3",
+    "@google/generative-ai": "^0.13.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "mongodb": "4.1",
+    "mongoose": "^8.5.2",
+    "nodemailer": "^6.9.7",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.7.5"
+  }
+}
