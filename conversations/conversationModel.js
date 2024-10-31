@@ -1,23 +1,32 @@
 const mongoose = require('mongoose');
 
 const conversationSchema = new mongoose.Schema({
-    conversationId: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        auto: true
-    },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
     },
-    startTime: {
+    messages: [
+        {
+            message: String,
+            sender: {
+                type: String,
+                enum: ['User', 'Bot'],
+                required: true
+            },
+            timestamp: {
+                type: Date,
+                default: Date.now
+            }
+        }
+    ],
+    createdAt: {
         type: Date,
-        required: true,
         default: Date.now
     },
-    endTime: {
-        type: Date
+    updatedAt: {
+        type: Date,
+        default: Date.now
     }
 });
 
